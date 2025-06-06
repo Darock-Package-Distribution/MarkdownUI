@@ -1,0 +1,48 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target arm64-apple-watchos9.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name MarkdownUI
+import CoreGraphics
+import Foundation
+import ImageIO
+@_exported import MarkdownUI
+import Swift
+import SwiftUI
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public protocol MarkdownContentProtocol {
+  var _markdownContent: MarkdownUI.MarkdownContent { get }
+}
+public struct MarkdownContent : Swift.Equatable, MarkdownUI.MarkdownContentProtocol {
+  public var _markdownContent: MarkdownUI.MarkdownContent {
+    get
+  }
+  public init(_ markdown: Swift.String)
+  public init(@MarkdownUI.MarkdownContentBuilder content: () -> MarkdownUI.MarkdownContent)
+  public static func == (a: MarkdownUI.MarkdownContent, b: MarkdownUI.MarkdownContent) -> Swift.Bool
+}
+@_Concurrency.MainActor @preconcurrency public struct Markdown : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init(_ content: MarkdownUI.MarkdownContent, baseURL: Foundation.URL? = nil, imageBaseURL: Foundation.URL? = nil)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s10MarkdownUI0A0V4bodyQrvp", 0) __
+}
+@_Concurrency.MainActor @preconcurrency public struct CodedMarkdown : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init(_ content: Swift.String, fontSize: Swift.Double = 18)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s10MarkdownUI05CodedA0V4bodyQrvp", 0) __
+}
+@_functionBuilder public enum MarkdownContentBuilder {
+  public static func buildBlock(_ components: any MarkdownUI.MarkdownContentProtocol...) -> MarkdownUI.MarkdownContent
+  public static func buildExpression(_ expression: any MarkdownUI.MarkdownContentProtocol) -> MarkdownUI.MarkdownContent
+  public static func buildExpression(_ expression: Swift.String) -> MarkdownUI.MarkdownContent
+  public static func buildArray(_ components: [any MarkdownUI.MarkdownContentProtocol]) -> MarkdownUI.MarkdownContent
+  public static func buildOptional(_ component: (any MarkdownUI.MarkdownContentProtocol)?) -> MarkdownUI.MarkdownContent
+  public static func buildEither(first component: any MarkdownUI.MarkdownContentProtocol) -> MarkdownUI.MarkdownContent
+  public static func buildEither(second component: any MarkdownUI.MarkdownContentProtocol) -> MarkdownUI.MarkdownContent
+}
+extension MarkdownUI.Markdown : Swift.Sendable {}
+extension MarkdownUI.CodedMarkdown : Swift.Sendable {}

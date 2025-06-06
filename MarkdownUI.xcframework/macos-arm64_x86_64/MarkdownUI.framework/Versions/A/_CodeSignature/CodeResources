@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Resources/Assets.car</key>
+		<data>
+		tD1dwCMqYD0LayICLJ8/L3iTxqw=
+		</data>
 		<key>Resources/Info.plist</key>
 		<data>
 		y/pQWRODoSeH0O3eOGhDZcJG790=
@@ -22,14 +26,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8MVYu4aNnF3NWSILpg31UzBA+F0smJfkurhQREdCr10=
+			CBh9lVYT8IGm1ZoNUKoXv+5tFcZ25rdzrlq7d4y1MJ8=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/Project/x86_64-apple-macos.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aAL/hb8tatBvzoRrNRGrJqOLMul6KHjGqb2yYvljW9I=
+			JlDYUh6GFw9Vk4Ggj98oO0m5nbUR1hI856a1rUxuEDQ=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-macos.abi.json</key>
@@ -43,7 +47,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GfcOKzCuCZ2X3Nh0xTMGGFlzE1AnnzX69LPszSvtxQo=
+			KIGglXavgJyl5bKht+8XoRtNREAO/6C9Wr1Nb4PoPGU=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-macos.swiftdoc</key>
@@ -57,14 +61,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GfcOKzCuCZ2X3Nh0xTMGGFlzE1AnnzX69LPszSvtxQo=
+			KIGglXavgJyl5bKht+8XoRtNREAO/6C9Wr1Nb4PoPGU=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-macos.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QiCBT9E/lbaiQgaT53NVgaodWBYC1UsaGMI8wXAQjZc=
+			ZEwP9fFvtChfNnvDe3Y86MzczHqjXAEjH5VFHEvahKQ=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/x86_64-apple-macos.abi.json</key>
@@ -78,7 +82,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			17o6oUknnFZmUi+MPEppgFLrxRQ7LyZAUQ77dupacvo=
+			5dft3U7TWdV5Tda3oQ+g5pPUenq2wblo7X0P/R9HBHw=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/x86_64-apple-macos.swiftdoc</key>
@@ -92,14 +96,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			17o6oUknnFZmUi+MPEppgFLrxRQ7LyZAUQ77dupacvo=
+			5dft3U7TWdV5Tda3oQ+g5pPUenq2wblo7X0P/R9HBHw=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/x86_64-apple-macos.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uLDOmm9jYIfxUMaPzlhfvOrHOWnOjLi/Me44BnVEXb8=
+			AR8SKyfNcxGC7fojog8avy3SbEUk8NOX6SxqGi9YR0Q=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -107,6 +111,13 @@
 			<key>hash2</key>
 			<data>
 			ZPwT30BojXT8tP/gHiGrhJoZd/8AleyXVwSpV9YoYf8=
+			</data>
+		</dict>
+		<key>Resources/Assets.car</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			yBguEu6wKwMHweyi+YUgxqPGJEeOHvpwDLvkzWsjIeU=
 			</data>
 		</dict>
 		<key>Resources/Info.plist</key>

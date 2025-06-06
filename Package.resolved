@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "darockui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Darock-Studio/DarockUI",
+      "state" : {
+        "branch" : "main",
+        "revision" : "373cf8cc67206e4c475e23e689bfc8cfb5d9b2c3"
+      }
+    }
+  ],
+  "version" : 2
+}

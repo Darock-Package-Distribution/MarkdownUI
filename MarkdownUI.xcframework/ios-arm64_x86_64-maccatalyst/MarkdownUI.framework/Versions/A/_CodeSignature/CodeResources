@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Resources/Assets.car</key>
+		<data>
+		UJnGzypQGuFo4URKRky9yyVeqyY=
+		</data>
 		<key>Resources/Info.plist</key>
 		<data>
 		9ZqzVS35ve0Rd+sKKoRca5BJ5g4=
@@ -22,14 +26,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FI4G6d099sHYxY0Rbn9Frg6LP9h/ubSHO33XMPCGf2c=
+			NrHEypLeafs4FlpEWpXHkD5jvkEg04c07uLs6yWVbTw=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/Project/x86_64-apple-ios-macabi.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qQ3DSRk/ODOC2UlUrN7zeMSPtsDgkO7rT9EGnfcQUwo=
+			iwafyaxh8tM5/V+tL21sPn8LhG5P/GcZVhLSlqXUtsY=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-ios-macabi.abi.json</key>
@@ -43,7 +47,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4CtJ83kPyrrA/5YPY2wquJirukvu5UPYlEPV8oyyPb8=
+			T9SEFFkCExUkEMQqRGBZEZWjJuL4U2QkWeMbFSyxVko=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-ios-macabi.swiftdoc</key>
@@ -57,14 +61,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4CtJ83kPyrrA/5YPY2wquJirukvu5UPYlEPV8oyyPb8=
+			T9SEFFkCExUkEMQqRGBZEZWjJuL4U2QkWeMbFSyxVko=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-ios-macabi.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WZJnCnZZykhipx9kw7j1D/Eb3rT2xW9LYBqIb3geytc=
+			AqA6JpFUuV90iaal6RPL9bR6Zqt3Va+sQAYTfRRygM8=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/x86_64-apple-ios-macabi.abi.json</key>
@@ -78,7 +82,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4cFKzANtuyGx8+Bg9jYTZHAAEdkrGtI7SCtJOCwvfq4=
+			hiU4ufTgwZhttXtW3hJH20lJi8FIOGtNXPjTloqq1x8=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/x86_64-apple-ios-macabi.swiftdoc</key>
@@ -92,14 +96,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4cFKzANtuyGx8+Bg9jYTZHAAEdkrGtI7SCtJOCwvfq4=
+			hiU4ufTgwZhttXtW3hJH20lJi8FIOGtNXPjTloqq1x8=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/x86_64-apple-ios-macabi.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0Oi3oJ6gNIGveL+QF7lbF9z3CjXQsc44XBJM5PTRRXE=
+			toHMYKQDXD3nPCrBuhjSrboNTpKJboMEsQQ8ZJPfNns=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -107,6 +111,13 @@
 			<key>hash2</key>
 			<data>
 			ZPwT30BojXT8tP/gHiGrhJoZd/8AleyXVwSpV9YoYf8=
+			</data>
+		</dict>
+		<key>Resources/Assets.car</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			nxJ8uhRUKd4q5bX00RlKr2RN/yrhyn/QP/j/gdC7gwo=
 			</data>
 		</dict>
 		<key>Resources/Info.plist</key>

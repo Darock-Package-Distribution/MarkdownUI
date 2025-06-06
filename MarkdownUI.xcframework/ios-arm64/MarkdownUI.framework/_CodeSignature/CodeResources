@@ -4,6 +4,14 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>.DS_Store</key>
+		<data>
+		4zhcjrhY37cdqsQx1hTBNdLcENA=
+		</data>
+		<key>Assets.car</key>
+		<data>
+		vPa3K7kwfUNi5Y5g5UC5PX9uSLw=
+		</data>
 		<key>Headers/MarkdownUI.h</key>
 		<data>
 		rxob61KoBTJ1eeKGfw44zAjQ3iI=
@@ -12,9 +20,13 @@
 		<data>
 		+rKfQXnh0OshhXcby1TuhRyshMQ=
 		</data>
+		<key>Modules/.DS_Store</key>
+		<data>
+		dLzNtYAkitNcJUGzMnkM8IEgAdU=
+		</data>
 		<key>Modules/MarkdownUI.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		kLKch3lpO4nXeRcFMW57SDZqq+k=
+		SKO0Nd2kK60PV6zv8siKe0owJ0M=
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -22,7 +34,7 @@
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		QBC71BLNT6sm3Cxy/WDZVnyn3vM=
+		8ck45aZJqRM4UgSUXx6cRDcokJc=
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -30,11 +42,11 @@
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		QBC71BLNT6sm3Cxy/WDZVnyn3vM=
+		8ck45aZJqRM4UgSUXx6cRDcokJc=
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		lCO/M1Yux1EVXFbd6vR13yIR6lk=
+		NN3U/R+E2v397KnLy2sABkvs3sY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -43,6 +55,13 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Assets.car</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			V0Gc2ulx2paRkO47ITkc/duWv04VC+MT4/SFCorpiTI=
+			</data>
+		</dict>
 		<key>Headers/MarkdownUI.h</key>
 		<dict>
 			<key>hash2</key>
@@ -54,7 +73,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			EZxh5gDMQ8bo2FSsPHNCzDvkXl/zuuaA9mMoYoKvX4Q=
+			AchFy31iXtRbn8VvhvvhdiN6BDnfsA5W1y/FSITD394=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-ios.abi.json</key>
@@ -68,7 +87,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TjhMuSspyfhZz0dbJUvH3TdPJVhrfMmskbq4zYtuDWA=
+			2pEkAZ765DZWCnMReUNNIicYEYhUTAcXdDVXjXz+9JM=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -82,14 +101,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TjhMuSspyfhZz0dbJUvH3TdPJVhrfMmskbq4zYtuDWA=
+			2pEkAZ765DZWCnMReUNNIicYEYhUTAcXdDVXjXz+9JM=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mLX3qn1a/5YUpoEmo2ApuCfd0V4t1maMS2W7LWDWwJs=
+			YdWe8zUeyGB9UlLip2m4zivM4yYnXYUgvMMyvrAXWEo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Assets.car</key>
+		<data>
+		vPa3K7kwfUNi5Y5g5UC5PX9uSLw=
+		</data>
 		<key>Headers/MarkdownUI.h</key>
 		<data>
 		rxob61KoBTJ1eeKGfw44zAjQ3iI=
@@ -14,11 +18,11 @@
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		US8OabDL2wNstkWcCSpmxgzCGy4=
+		T7Ly9uC0DLMRWR44NCGR8YssRKM=
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		iCoiindQqSD6dIKwHfpQD9hHj1U=
+		eI983HxzLcq41vpXXmTDpo7JcV8=
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -26,7 +30,7 @@
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		iitG+hbo/JHAAjiC6C36rftHozk=
+		PbnHMh5YDvI/gmRJ9fYwcj3nkgc=
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -34,11 +38,11 @@
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		iitG+hbo/JHAAjiC6C36rftHozk=
+		PbnHMh5YDvI/gmRJ9fYwcj3nkgc=
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ZFmihsEvLppfDlIj3qlQ9K34z6U=
+		7nh54L1sLj1TyTxn/Vb10NRJdx4=
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -46,7 +50,7 @@
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		L3Y39fQHeI6kKn5rIHdj3HJblsw=
+		RVtgzrtCBVOdKiQTOrXV/nx8HyM=
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -54,11 +58,11 @@
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		L3Y39fQHeI6kKn5rIHdj3HJblsw=
+		RVtgzrtCBVOdKiQTOrXV/nx8HyM=
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		cJhoDeGOSrT+aEVn/RH/Zcv0A48=
+		qlbIUa6nVd3jJU40Y15Xn+311vc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -67,6 +71,13 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Assets.car</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			V0Gc2ulx2paRkO47ITkc/duWv04VC+MT4/SFCorpiTI=
+			</data>
+		</dict>
 		<key>Headers/MarkdownUI.h</key>
 		<dict>
 			<key>hash2</key>
@@ -78,14 +89,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			s3d96+xVkZtlQdQjtTrTKDTlaeuBCIoKLATwSZVXrNg=
+			Zgdi+a7OMyxtzUGTdHl5V7Cdq/i0o02KoZ+k93yzF0w=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wE8oywe3691v+fu7XVPF7gF0P80wU3OjaaY8FjITGzA=
+			XVM+i2kIYws7Wy9DMvTJXY29r0WgU1yvQfQwIQ9uBEI=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
@@ -99,7 +110,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WJQLL0nqS7uMwoCSrj6/wEFYgoSRMnHRrKP7CAdAaBg=
+			CUJ5R3AE+t5fmVH4ZlBqP+yDZSFBz8RSUTNUp4TQBKc=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -113,14 +124,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WJQLL0nqS7uMwoCSrj6/wEFYgoSRMnHRrKP7CAdAaBg=
+			CUJ5R3AE+t5fmVH4ZlBqP+yDZSFBz8RSUTNUp4TQBKc=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3blPOafHoPdUpSUDF45/NUw2/SwItkhtNGzMDDJsGv4=
+			gdsPPhk6i9+BTanGNDVQ/wuviytrkBgNNOpdUWyBhxM=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -134,7 +145,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BRdW0ydrcW+406ikFIKPSnx9MpenvhZM92eh4y6cqU0=
+			fmde0zM0tKE4tW+nIPcSx9XcOa2oSqV3fruzu+09cRw=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -148,14 +159,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BRdW0ydrcW+406ikFIKPSnx9MpenvhZM92eh4y6cqU0=
+			fmde0zM0tKE4tW+nIPcSx9XcOa2oSqV3fruzu+09cRw=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5/c3nS5PH69/nRLONoVtRaqUUFaijPuHuFyJl1v+t8Q=
+			SF63uYY/yRFh0Fxw5iQRVs1mMv9WG+q4Jp93zEBbUQs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

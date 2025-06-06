@@ -2,11 +2,14 @@
 // swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
 // swift-module-flags: -target x86_64-apple-watchos9.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name MarkdownUI
 import CoreGraphics
+import DarockUI
+import DeveloperToolsSupport
 import Foundation
 import ImageIO
 @_exported import MarkdownUI
 import Swift
 import SwiftUI
+import UIKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims

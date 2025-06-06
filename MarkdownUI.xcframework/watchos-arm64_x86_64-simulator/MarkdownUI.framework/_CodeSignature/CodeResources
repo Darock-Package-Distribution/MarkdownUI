@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Assets.car</key>
+		<data>
+		IMxQGETMNIyXPxBkhsbG0uh8sAg=
+		</data>
 		<key>Headers/MarkdownUI.h</key>
 		<data>
 		rxob61KoBTJ1eeKGfw44zAjQ3iI=
@@ -14,11 +18,11 @@
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/Project/arm64-apple-watchos-simulator.swiftsourceinfo</key>
 		<data>
-		WqK3EMlFa5LZAoNsbxBL7UOiUoA=
+		fZLiKAp27CaByhmXs1M0r9rVAmg=
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/Project/x86_64-apple-watchos-simulator.swiftsourceinfo</key>
 		<data>
-		1YBbjEbc50b/rWCmZ551DjbJ92w=
+		Q7Y9N+MPbUp/SBnPTh0ihJI2O44=
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-watchos-simulator.abi.json</key>
 		<data>
@@ -26,7 +30,7 @@
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-watchos-simulator.private.swiftinterface</key>
 		<data>
-		hi4lKOyB+7a/cTJdL5rh8EJifwg=
+		eji+V7VYkh7VK2H3QCMcrcxCffI=
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-watchos-simulator.swiftdoc</key>
 		<data>
@@ -34,11 +38,11 @@
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-watchos-simulator.swiftinterface</key>
 		<data>
-		hi4lKOyB+7a/cTJdL5rh8EJifwg=
+		eji+V7VYkh7VK2H3QCMcrcxCffI=
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-watchos-simulator.swiftmodule</key>
 		<data>
-		pWbSsARYibsDjOAX/W2oWpB3POo=
+		fa6AnZ3VeFdUDjU1WlnczEfFe9I=
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/x86_64-apple-watchos-simulator.abi.json</key>
 		<data>
@@ -46,7 +50,7 @@
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/x86_64-apple-watchos-simulator.private.swiftinterface</key>
 		<data>
-		4GrHA3SXBe35MH/Wzvy3lKpfGU8=
+		m3Im9M3F7X1+PU+Fnu1vnGblMrg=
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/x86_64-apple-watchos-simulator.swiftdoc</key>
 		<data>
@@ -54,11 +58,11 @@
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/x86_64-apple-watchos-simulator.swiftinterface</key>
 		<data>
-		4GrHA3SXBe35MH/Wzvy3lKpfGU8=
+		m3Im9M3F7X1+PU+Fnu1vnGblMrg=
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/x86_64-apple-watchos-simulator.swiftmodule</key>
 		<data>
-		G10Qs9Zn4MmGiA9wfKRyymCgM3c=
+		lYTglHhx/1NoG/cxtGwOr0/SvDk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -67,6 +71,13 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Assets.car</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			M5ClRHfb9Cs+oE70Ml6AZMATzegSpzIqs86AL6YpvdM=
+			</data>
+		</dict>
 		<key>Headers/MarkdownUI.h</key>
 		<dict>
 			<key>hash2</key>
@@ -78,14 +89,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0+dLyHBcIXxejFJXDzxeKyH69QWMpw1UMzrOfH+tS7Y=
+			dzl4cld4Gm3s4d9BsFy/f/3iHPXo/9InXWJIEUR0dEY=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/Project/x86_64-apple-watchos-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			M6WYZb7RaapdLX4XU65I44kEx3FJt9skiH/nt7SeioE=
+			a6J/UYFpOxRQA2/EXMpTdzSMmnJMwGQi0iP6Lp4ZjgM=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-watchos-simulator.abi.json</key>
@@ -99,7 +110,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3/JgHeD3q+gGF699+0ZhOQQIzcYJxfsre7g0FLWzi9c=
+			hawkr0w+8TBs5KYHBCIaCEgBJrk7oU+2VxWXd3KYxmQ=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-watchos-simulator.swiftdoc</key>
@@ -113,14 +124,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3/JgHeD3q+gGF699+0ZhOQQIzcYJxfsre7g0FLWzi9c=
+			hawkr0w+8TBs5KYHBCIaCEgBJrk7oU+2VxWXd3KYxmQ=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-watchos-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/T9w1Xx4jD0nC+Jvm8zgSthh3bcxRlegnhyfNMLQ8dg=
+			ZjboqQvH7YowZLffYY6tNerx7ehPoe8F6QyVgzRZcAw=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/x86_64-apple-watchos-simulator.abi.json</key>
@@ -134,7 +145,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pcmxyofjrK3iQvOo8/dZwml/ObVSp8hjGXbA4Y55edE=
+			+3jmCZPcFvaGBnqFENpC3NL0R2E+X0Agmyd3yn5Fzok=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/x86_64-apple-watchos-simulator.swiftdoc</key>
@@ -148,14 +159,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pcmxyofjrK3iQvOo8/dZwml/ObVSp8hjGXbA4Y55edE=
+			+3jmCZPcFvaGBnqFENpC3NL0R2E+X0Agmyd3yn5Fzok=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/x86_64-apple-watchos-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			m55lwWz+CHLMiNZ7K+CUShKKmN2hgtCyCT8gbq9KgkE=
+			UjAd/EO6W07Yit1ERJgaEHe85m7oQwmAFwMJ532olng=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

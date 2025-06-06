@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Assets.car</key>
+		<data>
+		pmHtcd5sXWN2Uhg9Ce2YCzmgcZs=
+		</data>
 		<key>Headers/MarkdownUI.h</key>
 		<data>
 		rxob61KoBTJ1eeKGfw44zAjQ3iI=
@@ -14,7 +18,7 @@
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/Project/arm64-apple-xros.swiftsourceinfo</key>
 		<data>
-		IQsH4EX9kAdEM+4lIimimzByBig=
+		8KKrb4GZSIi3LOCmrWOjuzmhFaE=
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-xros.abi.json</key>
 		<data>
@@ -22,7 +26,7 @@
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-xros.private.swiftinterface</key>
 		<data>
-		zTb6HBHM/VE79l/2XFO3jDgdkzI=
+		IEsbGQ7VvzajHDIV0pS5jyrOC7I=
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-xros.swiftdoc</key>
 		<data>
@@ -30,11 +34,11 @@
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-xros.swiftinterface</key>
 		<data>
-		zTb6HBHM/VE79l/2XFO3jDgdkzI=
+		IEsbGQ7VvzajHDIV0pS5jyrOC7I=
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-xros.swiftmodule</key>
 		<data>
-		hnabXJQENda0ORu67HDsRb9uyss=
+		e5ohKfv+zQ6BXuoPnrDPWbZCU60=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -43,6 +47,13 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Assets.car</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			yqTvTmqdTyxQ5SB6r94BgZKYtLDbIvCKHM0GskD7aGw=
+			</data>
+		</dict>
 		<key>Headers/MarkdownUI.h</key>
 		<dict>
 			<key>hash2</key>
@@ -54,7 +65,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ke3fk/DG2WQBXEh9tsmQcXrhHLAwiAISGjQGvw3djMc=
+			cgxft1Cb4s1lUijwpfHPCTXU9ZvAJ0vNxyfGLHBicJw=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-xros.abi.json</key>
@@ -68,7 +79,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LohWXL5Wt/7ncFVBb3vflH0Bca7cD8FlHwo9VBkL2hg=
+			GANNjuyLFi63/Sxz/tZEER03C6t8a7gQvzo/nwoRR14=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-xros.swiftdoc</key>
@@ -82,14 +93,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LohWXL5Wt/7ncFVBb3vflH0Bca7cD8FlHwo9VBkL2hg=
+			GANNjuyLFi63/Sxz/tZEER03C6t8a7gQvzo/nwoRR14=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-xros.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VrJHkmxW+TsrUiYFPxscMZWgUWmwjIr2hQiVFNOpz6U=
+			iIUpAyyiCs/SmsrYoPCEOzv55w79pzKV3s+6PEThojc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -4,13 +4,9 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>.DS_Store</key>
-		<data>
-		4zhcjrhY37cdqsQx1hTBNdLcENA=
-		</data>
 		<key>Assets.car</key>
 		<data>
-		vPa3K7kwfUNi5Y5g5UC5PX9uSLw=
+		usmsqyYO3N4m11g/xskP/ooOsCw=
 		</data>
 		<key>Headers/MarkdownUI.h</key>
 		<data>
@@ -18,15 +14,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		+rKfQXnh0OshhXcby1TuhRyshMQ=
-		</data>
-		<key>Modules/.DS_Store</key>
-		<data>
-		dLzNtYAkitNcJUGzMnkM8IEgAdU=
+		BCZGcAUR/U81SLwazXqhnjXtD54=
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		4WblcyK2i9J0qmmaMli30N50nic=
+		LeI2cmgf8oDSvGXtznj7odxy6Wc=
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -34,19 +26,19 @@
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		8ck45aZJqRM4UgSUXx6cRDcokJc=
+		/HOm+620LXRGYxV/2V1mHT40jTI=
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		GhhiBVi7OsLmUrLZap9PiUOIJG4=
+		hfkfwnFZynvjP08VIw6KUR8r5Rc=
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		8ck45aZJqRM4UgSUXx6cRDcokJc=
+		/HOm+620LXRGYxV/2V1mHT40jTI=
 		</data>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		sTBeaIW1hbaEvYspQQf6vQYyvzg=
+		EymH8uEN037DwCMNx0Rj4tNNBzg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -59,7 +51,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			V0Gc2ulx2paRkO47ITkc/duWv04VC+MT4/SFCorpiTI=
+			QhVkqml7EXjqrSDQnmbL7wGaCMqFFil33lsoaBgkupc=
 			</data>
 		</dict>
 		<key>Headers/MarkdownUI.h</key>
@@ -73,7 +65,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VOJOldAHH/UMQwtTXWv9MzQhR49SUkb1wEnDfY6qo3U=
+			Sg9Xe49peKGCFvKh7/RcLP4lXfGI07JGxHc6dQ7xyuY=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-ios.abi.json</key>
@@ -87,28 +79,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2pEkAZ765DZWCnMReUNNIicYEYhUTAcXdDVXjXz+9JM=
+			FnWEj0ZBhLAQu6NAuyHKX30Jk/pSSx81Zxq3zld9rHI=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6VU+ytYZmXGQUsGGhntOJg7OogblvF+JKR68R5DqJPg=
+			ss/jUmLMVuJrkta0FFQZ1TIjtieramFKHsLopwb64tU=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2pEkAZ765DZWCnMReUNNIicYEYhUTAcXdDVXjXz+9JM=
+			FnWEj0ZBhLAQu6NAuyHKX30Jk/pSSx81Zxq3zld9rHI=
 			</data>
 		</dict>
 		<key>Modules/MarkdownUI.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+sz6myOZ4quR7tkyuEI2GYfmiUEwMZBCd8UhQ7NENT8=
+			uy+Ig/km67Cu3PSTEB/20maYb1EbyoICUjpAAC5p41o=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

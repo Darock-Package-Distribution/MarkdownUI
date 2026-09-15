@@ -28,6 +28,7 @@ public struct InlineContent : Swift.Equatable, MarkdownUI.InlineContentProtocol 
   public static func == (a: MarkdownUI.InlineContent, b: MarkdownUI.InlineContent) -> Swift.Bool
 }
 public struct TextKerning : MarkdownUI.TextStyle {
+  public init(_ kern: CoreFoundation.CGFloat?)
   public func _collectAttributes(in attributes: inout Foundation.AttributeContainer)
 }
 extension SwiftUICore.View {
@@ -38,8 +39,11 @@ public struct CodeBlock : MarkdownUI.MarkdownContentProtocol {
   public var _markdownContent: MarkdownUI.MarkdownContent {
     get
   }
+  public init(language: Swift.String? = nil, content: Swift.String)
+  public init(language: Swift.String? = nil, content: () -> Swift.String)
 }
 public struct BackgroundColor : MarkdownUI.TextStyle {
+  public init(_ backgroundColor: SwiftUICore.Color?)
   public func _collectAttributes(in attributes: inout Foundation.AttributeContainer)
 }
 @_functionBuilder public enum TextStyleBuilder {
@@ -70,6 +74,7 @@ extension Swift.Optional : MarkdownUI.TextStyle where Wrapped : MarkdownUI.TextS
   public func _collectAttributes(in attributes: inout Foundation.AttributeContainer)
 }
 public struct TaskListItem : Swift.Hashable {
+  public init(isCompleted: Swift.Bool = false, @MarkdownUI.MarkdownContentBuilder content: () -> MarkdownUI.MarkdownContent)
   public static func == (a: MarkdownUI.TaskListItem, b: MarkdownUI.TaskListItem) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
@@ -79,6 +84,20 @@ public struct TaskListItem : Swift.Hashable {
 extension SwiftUICore.View {
   @_Concurrency.MainActor @preconcurrency public func markdownInlineImageProvider(_ inlineImageProvider: any MarkdownUI.InlineImageProvider) -> some SwiftUICore.View
   
+}
+extension MarkdownUI.DefaultImageProvider {
+  @available(*, deprecated, message: "Use the 'default' static property")
+  public init(urlSession: Foundation.URLSession = .shared)
+}
+extension MarkdownUI.DefaultInlineImageProvider {
+  @available(*, deprecated, message: "Use the 'default' static property")
+  public init(urlSession: Foundation.URLSession = .shared)
+}
+extension MarkdownUI.BlockStyle where Configuration == MarkdownUI.BlockConfiguration {
+  @available(*, deprecated, message: "Use the initializer that takes a closure receiving a 'Configuration' value.")
+  public init<Body>(@SwiftUICore.ViewBuilder body: @escaping (_ label: MarkdownUI.BlockConfiguration.Label) -> Body) where Body : SwiftUICore.View
+  @available(*, deprecated, message: "Use the initializer that takes a closure receiving a 'Configuration' value.")
+  public init()
 }
 extension SwiftUICore.View {
   @available(*, deprecated, message: "Use the version of this function that takes a closure receiving a generic 'Configuration'\nvalue.")
@@ -115,6 +134,10 @@ extension MarkdownUI.Theme {
   public func listItem<Body>(@SwiftUICore.ViewBuilder body: @escaping (_ label: MarkdownUI.BlockConfiguration.Label) -> Body) -> MarkdownUI.Theme where Body : SwiftUICore.View
   @available(*, deprecated, message: "Use the version of this function that takes a closure receiving a 'BlockConfiguration'\nvalue.")
   public func table<Body>(@SwiftUICore.ViewBuilder body: @escaping (_ label: MarkdownUI.BlockConfiguration.Label) -> Body) -> MarkdownUI.Theme where Body : SwiftUICore.View
+}
+extension MarkdownUI.Heading {
+  @available(*, unavailable, message: "Use 'init(_ level:content:)'")
+  public init(level: Swift.Int, @MarkdownUI.InlineContentBuilder content: () -> MarkdownUI.InlineContent)
 }
 @available(*, unavailable, message: "\"MarkdownImageHandler\" has been superseded by the \"ImageProvider\" protocol and its conforming\ntypes \"DefaultImageProvider\" and \"AssetImageProvider\".")
 public struct MarkdownImageHandler {
@@ -183,6 +206,7 @@ public struct MarkdownStyle : Swift.Hashable {
     }
   }
   public struct HeadingScales : Swift.Hashable {
+    public init(h1: CoreFoundation.CGFloat, h2: CoreFoundation.CGFloat, h3: CoreFoundation.CGFloat, h4: CoreFoundation.CGFloat, h5: CoreFoundation.CGFloat, h6: CoreFoundation.CGFloat)
     public static var `default`: MarkdownUI.MarkdownStyle.HeadingScales {
       get
     }
@@ -200,6 +224,7 @@ public struct MarkdownStyle : Swift.Hashable {
     public var listMarkerSpacing: CoreFoundation.CGFloat
     public var headingScales: MarkdownUI.MarkdownStyle.HeadingScales
     public var headingSpacing: CoreFoundation.CGFloat
+    public init(codeFontScale: CoreFoundation.CGFloat = 0.94, headIndentStep: CoreFoundation.CGFloat = 1.97, tailIndentStep: CoreFoundation.CGFloat = -1, paragraphSpacing: CoreFoundation.CGFloat = 1, listMarkerSpacing: CoreFoundation.CGFloat = 0.47, headingScales: MarkdownUI.MarkdownStyle.HeadingScales = .default, headingSpacing: CoreFoundation.CGFloat = 0.67)
     public static func == (a: MarkdownUI.MarkdownStyle.Measurements, b: MarkdownUI.MarkdownStyle.Measurements) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
@@ -209,6 +234,7 @@ public struct MarkdownStyle : Swift.Hashable {
   public var font: MarkdownUI.MarkdownStyle.Font
   public var foregroundColor: SwiftUICore.Color
   public var measurements: MarkdownUI.MarkdownStyle.Measurements
+  public init(font: MarkdownUI.MarkdownStyle.Font = .body, foregroundColor: SwiftUICore.Color = .primary, measurements: MarkdownUI.MarkdownStyle.Measurements = .init())
   public static func == (a: MarkdownUI.MarkdownStyle, b: MarkdownUI.MarkdownStyle) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
@@ -229,6 +255,7 @@ extension MarkdownUI.BlockStyle where Configuration == MarkdownUI.TaskListMarker
   }
 }
 public struct AssetImageProvider : MarkdownUI.ImageProvider {
+  public init(name: @escaping (Foundation.URL) -> Swift.String = \.lastPathComponent, bundle: Foundation.Bundle? = nil)
   public func makeImage(url: Foundation.URL?) -> some SwiftUICore.View
   
   public typealias Body = @_opaqueReturnTypeOf("$s10MarkdownUI18AssetImageProviderV04makeD03urlQr10Foundation3URLVSg_tF", 0) __
@@ -242,11 +269,15 @@ public struct TableBorderStyle {
   public var visibleBorders: MarkdownUI.TableBorderSelector
   public var color: SwiftUICore.Color
   public var strokeStyle: SwiftUICore.StrokeStyle
+  public init(_ visibleBorders: MarkdownUI.TableBorderSelector = .allBorders, color: SwiftUICore.Color, strokeStyle: SwiftUICore.StrokeStyle)
+  public init(_ visibleBorders: MarkdownUI.TableBorderSelector = .allBorders, color: SwiftUICore.Color, width: CoreFoundation.CGFloat = 1)
 }
 public struct UnderlineStyle : MarkdownUI.TextStyle {
+  public init(_ lineStyle: SwiftUICore.Text.LineStyle?)
   public func _collectAttributes(in attributes: inout Foundation.AttributeContainer)
 }
 public struct TextTableRow<Value> {
+  public init(_ value: Value)
 }
 public struct DefaultInlineImageProvider : MarkdownUI.InlineImageProvider {
   public func image(with url: Foundation.URL, label: Swift.String) async throws -> SwiftUICore.Image
@@ -290,6 +321,7 @@ public struct MarkdownContent : Swift.Equatable, MarkdownUI.MarkdownContentProto
   public static func == (a: MarkdownUI.MarkdownContent, b: MarkdownUI.MarkdownContent) -> Swift.Bool
 }
 public struct FontFamilyVariant : MarkdownUI.TextStyle {
+  public init(_ familyVariant: MarkdownUI.FontProperties.FamilyVariant)
   public func _collectAttributes(in attributes: inout Foundation.AttributeContainer)
 }
 @_functionBuilder public enum InlineContentBuilder {
@@ -302,6 +334,7 @@ public struct FontFamilyVariant : MarkdownUI.TextStyle {
   public static func buildEither(second component: any MarkdownUI.InlineContentProtocol) -> MarkdownUI.InlineContent
 }
 public struct FontDigitVariant : MarkdownUI.TextStyle {
+  public init(_ digitVariant: MarkdownUI.FontProperties.DigitVariant)
   public func _collectAttributes(in attributes: inout Foundation.AttributeContainer)
 }
 public struct Heading : MarkdownUI.MarkdownContentProtocol {
@@ -321,6 +354,7 @@ public struct Heading : MarkdownUI.MarkdownContentProtocol {
   public var _markdownContent: MarkdownUI.MarkdownContent {
     get
   }
+  public init(_ level: MarkdownUI.Heading.Level = .level1, @MarkdownUI.InlineContentBuilder content: () -> MarkdownUI.InlineContent)
 }
 public struct FontProperties : Swift.Hashable {
   public enum Family : Swift.Hashable {
@@ -392,6 +426,9 @@ public struct FontProperties : Swift.Hashable {
   public var scaledSize: CoreFoundation.CGFloat {
     get
   }
+  @available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)
+  public init(family: MarkdownUI.FontProperties.Family = .system(), familyVariant: MarkdownUI.FontProperties.FamilyVariant = .normal, capsVariant: MarkdownUI.FontProperties.CapsVariant = .normal, digitVariant: MarkdownUI.FontProperties.DigitVariant = .normal, style: MarkdownUI.FontProperties.Style = .normal, weight: SwiftUICore.Font.Weight = Self.defaultWeight, width: SwiftUICore.Font.Width, size: CoreFoundation.CGFloat = Self.defaultSize, scale: CoreFoundation.CGFloat = 1)
+  public init(family: MarkdownUI.FontProperties.Family = .system(), familyVariant: MarkdownUI.FontProperties.FamilyVariant = .normal, capsVariant: MarkdownUI.FontProperties.CapsVariant = .normal, digitVariant: MarkdownUI.FontProperties.DigitVariant = .normal, style: MarkdownUI.FontProperties.Style = .normal, weight: SwiftUICore.Font.Weight = Self.defaultWeight, size: CoreFoundation.CGFloat = Self.defaultSize, scale: CoreFoundation.CGFloat = 1)
   public static func == (a: MarkdownUI.FontProperties, b: MarkdownUI.FontProperties) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
@@ -584,6 +621,7 @@ public struct Blockquote : MarkdownUI.MarkdownContentProtocol {
   public var _markdownContent: MarkdownUI.MarkdownContent {
     get
   }
+  public init(@MarkdownUI.MarkdownContentBuilder content: () -> MarkdownUI.MarkdownContent)
 }
 extension SwiftUICore.View {
   @_Concurrency.MainActor @preconcurrency public func markdownImageProvider<I>(_ imageProvider: I) -> some SwiftUICore.View where I : MarkdownUI.ImageProvider
@@ -593,6 +631,7 @@ public protocol CodeSyntaxHighlighter {
   func highlightCode(_ code: Swift.String, language: Swift.String?) -> SwiftUICore.Text
 }
 public struct PlainTextCodeSyntaxHighlighter : MarkdownUI.CodeSyntaxHighlighter {
+  public init()
   public func highlightCode(_ code: Swift.String, language: Swift.String?) -> SwiftUICore.Text
 }
 extension MarkdownUI.CodeSyntaxHighlighter where Self == MarkdownUI.PlainTextCodeSyntaxHighlighter {
@@ -608,6 +647,8 @@ public struct TaskList : MarkdownUI.MarkdownContentProtocol {
   public var _markdownContent: MarkdownUI.MarkdownContent {
     get
   }
+  public init(tight: Swift.Bool = true, @MarkdownUI.TaskListContentBuilder items: () -> [MarkdownUI.TaskListItem])
+  public init<S>(of sequence: S, tight: Swift.Bool = true, @MarkdownUI.TaskListContentBuilder items: (S.Element) -> [MarkdownUI.TaskListItem]) where S : Swift.Sequence
 }
 @_Concurrency.MainActor @preconcurrency public struct Markdown : SwiftUICore.View {
   @_Concurrency.MainActor @preconcurrency public init(_ content: MarkdownUI.MarkdownContent, baseURL: Foundation.URL? = nil, imageBaseURL: Foundation.URL? = nil)
@@ -616,7 +657,12 @@ public struct TaskList : MarkdownUI.MarkdownContentProtocol {
   }
   public typealias Body = @_opaqueReturnTypeOf("$s10MarkdownUI0A0V4bodyQrvp", 0) __
 }
+extension MarkdownUI.Markdown {
+  @_Concurrency.MainActor @preconcurrency public init(_ markdown: Swift.String, baseURL: Foundation.URL? = nil, imageBaseURL: Foundation.URL? = nil)
+  @_Concurrency.MainActor @preconcurrency public init(baseURL: Foundation.URL? = nil, imageBaseURL: Foundation.URL? = nil, @MarkdownUI.MarkdownContentBuilder content: () -> MarkdownUI.MarkdownContent)
+}
 public struct ListItem : Swift.Hashable {
+  public init(@MarkdownUI.MarkdownContentBuilder content: () -> MarkdownUI.MarkdownContent)
   public static func == (a: MarkdownUI.ListItem, b: MarkdownUI.ListItem) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
@@ -624,10 +670,12 @@ public struct ListItem : Swift.Hashable {
   }
 }
 public struct ForegroundColor : MarkdownUI.TextStyle {
+  public init(_ foregroundColor: SwiftUICore.Color?)
   public func _collectAttributes(in attributes: inout Foundation.AttributeContainer)
 }
 @available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)
 public struct FontWidth : MarkdownUI.TextStyle {
+  public init(_ width: SwiftUICore.Font.Width)
   public func _collectAttributes(in attributes: inout Foundation.AttributeContainer)
 }
 extension SwiftUICore.View {
@@ -659,6 +707,7 @@ extension SwiftUICore.View {
   
 }
 public struct FontStyle : MarkdownUI.TextStyle {
+  public init(_ style: MarkdownUI.FontProperties.Style)
   public func _collectAttributes(in attributes: inout Foundation.AttributeContainer)
 }
 public struct CodeBlockConfiguration {
@@ -671,6 +720,10 @@ public struct CodeBlockConfiguration {
   public let label: MarkdownUI.CodeBlockConfiguration.Label
 }
 public struct TextTableColumn<RowValue> {
+  public init(alignment: MarkdownUI.TextTableColumnAlignment? = nil, @MarkdownUI.InlineContentBuilder title: () -> MarkdownUI.InlineContent, @MarkdownUI.InlineContentBuilder content: @escaping (RowValue) -> MarkdownUI.InlineContent)
+  public init<V>(alignment: MarkdownUI.TextTableColumnAlignment? = nil, @MarkdownUI.InlineContentBuilder title: () -> MarkdownUI.InlineContent, value: Swift.KeyPath<RowValue, V>) where V : Swift.LosslessStringConvertible
+  public init(alignment: MarkdownUI.TextTableColumnAlignment? = nil, title: Swift.String, @MarkdownUI.InlineContentBuilder content: @escaping (RowValue) -> MarkdownUI.InlineContent)
+  public init<V>(alignment: MarkdownUI.TextTableColumnAlignment? = nil, title: Swift.String, value: Swift.KeyPath<RowValue, V>) where V : Swift.LosslessStringConvertible
 }
 extension SwiftUICore.View {
   @_Concurrency.MainActor @preconcurrency public func markdownMargin(top: MarkdownUI.RelativeSize) -> some SwiftUICore.View
@@ -725,12 +778,14 @@ extension MarkdownUI.TableBorderSelector {
   }
 }
 public struct FontFamily : MarkdownUI.TextStyle {
+  public init(_ family: MarkdownUI.FontProperties.Family)
   public func _collectAttributes(in attributes: inout Foundation.AttributeContainer)
 }
 public struct Code : MarkdownUI.InlineContentProtocol {
   public var _inlineContent: MarkdownUI.InlineContent {
     get
   }
+  public init(_ text: Swift.String)
 }
 extension SwiftUICore.View {
   @_Concurrency.MainActor @preconcurrency public func markdownTextStyle<S>(@MarkdownUI.TextStyleBuilder textStyle: @escaping () -> S) -> some SwiftUICore.View where S : MarkdownUI.TextStyle
@@ -750,11 +805,16 @@ public struct BulletedList : MarkdownUI.MarkdownContentProtocol {
   public var _markdownContent: MarkdownUI.MarkdownContent {
     get
   }
+  public init(tight: Swift.Bool = true, @MarkdownUI.ListContentBuilder items: () -> [MarkdownUI.ListItem])
+  public init<S>(of sequence: S, tight: Swift.Bool = true, @MarkdownUI.ListContentBuilder items: (S.Element) -> [MarkdownUI.ListItem]) where S : Swift.Sequence
+  public init<S>(of sequence: S, tight: Swift.Bool = true) where S : Swift.Sequence, S.Element == Swift.String
 }
 public struct FontCapsVariant : MarkdownUI.TextStyle {
+  public init(_ capsVariant: MarkdownUI.FontProperties.CapsVariant)
   public func _collectAttributes(in attributes: inout Foundation.AttributeContainer)
 }
 public struct AssetInlineImageProvider : MarkdownUI.InlineImageProvider {
+  public init(name: @escaping (Foundation.URL) -> Swift.String = \.lastPathComponent, bundle: Foundation.Bundle? = nil)
   public func image(with url: Foundation.URL, label: Swift.String) async throws -> SwiftUICore.Image
 }
 extension MarkdownUI.InlineImageProvider where Self == MarkdownUI.AssetInlineImageProvider {
@@ -766,8 +826,10 @@ public struct ThematicBreak : MarkdownUI.MarkdownContentProtocol {
   public var _markdownContent: MarkdownUI.MarkdownContent {
     get
   }
+  public init()
 }
 public struct TableBackgroundStyle {
+  public init<S>(background: @escaping (_ row: Swift.Int, _ column: Swift.Int) -> S) where S : SwiftUICore.ShapeStyle
 }
 extension MarkdownUI.TableBackgroundStyle {
   public static var clear: MarkdownUI.TableBackgroundStyle {
@@ -782,6 +844,9 @@ extension MarkdownUI.TableBackgroundStyle {
   }
   public typealias Body = @_opaqueReturnTypeOf("$s10MarkdownUI05CodedA0V4bodyQrvp", 0) __
 }
+extension MarkdownUI.Theme {
+  public static func github(fontSize: Swift.Double = 16) -> MarkdownUI.Theme
+}
 public protocol TextStyle {
   func _collectAttributes(in attributes: inout Foundation.AttributeContainer)
 }
@@ -789,16 +854,23 @@ public struct InlineLink : MarkdownUI.InlineContentProtocol {
   public var _inlineContent: MarkdownUI.InlineContent {
     get
   }
+  public init(_ text: Swift.String, destination: Foundation.URL)
+  public init(destination: Foundation.URL, @MarkdownUI.InlineContentBuilder content: () -> MarkdownUI.InlineContent)
 }
 public struct InlineImage : MarkdownUI.InlineContentProtocol {
   public var _inlineContent: MarkdownUI.InlineContent {
     get
   }
+  public init(source: Foundation.URL)
+  public init(_ text: Swift.String, source: Foundation.URL)
 }
 public struct NumberedList : MarkdownUI.MarkdownContentProtocol {
   public var _markdownContent: MarkdownUI.MarkdownContent {
     get
   }
+  public init(tight: Swift.Bool = true, start: Swift.Int = 1, @MarkdownUI.ListContentBuilder items: () -> [MarkdownUI.ListItem])
+  public init<S>(of sequence: S, tight: Swift.Bool = true, start: Swift.Int = 1, @MarkdownUI.ListContentBuilder items: (S.Element) -> [MarkdownUI.ListItem]) where S : Swift.Sequence
+  public init<S>(of sequence: S, tight: Swift.Bool = true, start: Swift.Int = 1) where S : Swift.Sequence, S.Element == Swift.String
 }
 public protocol InlineImageProvider {
   func image(with url: Foundation.URL, label: Swift.String) async throws -> SwiftUICore.Image
@@ -813,8 +885,16 @@ public protocol InlineImageProvider {
   public static func buildEither(second component: any MarkdownUI.MarkdownContentProtocol) -> MarkdownUI.MarkdownContent
 }
 public struct BlockStyle<Configuration> {
+  public init<Body>(@SwiftUICore.ViewBuilder body: @escaping (_ configuration: Configuration) -> Body) where Body : SwiftUICore.View
+}
+extension MarkdownUI.BlockStyle where Configuration == () {
+  public init<Body>(@SwiftUICore.ViewBuilder body: @escaping () -> Body) where Body : SwiftUICore.View
+}
+extension SwiftUICore.Color {
+  public init(rgba: Swift.UInt32)
 }
 public struct SoftBreak : MarkdownUI.InlineContentProtocol {
+  public init()
   public var _inlineContent: MarkdownUI.InlineContent {
     get
   }
@@ -873,6 +953,7 @@ public struct Theme {
   public var table: MarkdownUI.BlockStyle<MarkdownUI.BlockConfiguration>
   public var tableCell: MarkdownUI.BlockStyle<MarkdownUI.TableCellConfiguration>
   public var thematicBreak: MarkdownUI.BlockStyle<()>
+  public init()
 }
 extension MarkdownUI.Theme {
   public func text<S>(@MarkdownUI.TextStyleBuilder text: () -> S) -> MarkdownUI.Theme where S : MarkdownUI.TextStyle
@@ -962,6 +1043,7 @@ extension Foundation.URLSession {
   public static func imageLoading(memoryCapacity: Swift.Int, diskCapacity: Swift.Int, timeoutInterval: Foundation.TimeInterval) -> Foundation.URLSession
 }
 public struct TextTracking : MarkdownUI.TextStyle {
+  public init(_ tracking: CoreFoundation.CGFloat?)
   public func _collectAttributes(in attributes: inout Foundation.AttributeContainer)
 }
 @_functionBuilder public enum ListContentBuilder {
@@ -974,6 +1056,7 @@ public struct TextTracking : MarkdownUI.TextStyle {
   public static func buildEither(second component: [MarkdownUI.ListItem]) -> [MarkdownUI.ListItem]
 }
 public struct EmptyTextStyle : MarkdownUI.TextStyle {
+  public init()
   public func _collectAttributes(in: inout Foundation.AttributeContainer)
 }
 extension SwiftUICore.View {
@@ -1026,12 +1109,15 @@ extension MarkdownUI.Theme {
   public static let docC: MarkdownUI.Theme
 }
 public struct FontWeight : MarkdownUI.TextStyle {
+  public init(_ weight: SwiftUICore.Font.Weight)
   public func _collectAttributes(in attributes: inout Foundation.AttributeContainer)
 }
 public struct Strong : MarkdownUI.InlineContentProtocol {
   public var _inlineContent: MarkdownUI.InlineContent {
     get
   }
+  public init(_ text: Swift.String)
+  public init(@MarkdownUI.InlineContentBuilder content: () -> MarkdownUI.InlineContent)
 }
 public struct TableCellConfiguration {
   @_Concurrency.MainActor @preconcurrency public struct Label : SwiftUICore.View {
@@ -1047,8 +1133,11 @@ public struct TextTable : MarkdownUI.MarkdownContentProtocol {
   public var _markdownContent: MarkdownUI.MarkdownContent {
     get
   }
+  public init<Value>(@MarkdownUI.TextTableColumnBuilder<Value> columns: () -> [MarkdownUI.TextTableColumn<Value>], @MarkdownUI.TextTableRowBuilder<Value> rows: () -> [MarkdownUI.TextTableRow<Value>])
+  public init<Data>(_ data: Data, @MarkdownUI.TextTableColumnBuilder<Data.Element> columns: () -> [MarkdownUI.TextTableColumn<Data.Element>]) where Data : Swift.RandomAccessCollection
 }
 public struct LineBreak : MarkdownUI.InlineContentProtocol {
+  public init()
   public var _inlineContent: MarkdownUI.InlineContent {
     get
   }
@@ -1057,6 +1146,7 @@ public struct Paragraph : MarkdownUI.MarkdownContentProtocol {
   public var _markdownContent: MarkdownUI.MarkdownContent {
     get
   }
+  public init(@MarkdownUI.InlineContentBuilder content: () -> MarkdownUI.InlineContent)
 }
 extension SwiftUICore.View {
   @_Concurrency.MainActor @preconcurrency public func markdownCodeSyntaxHighlighter(_ codeSyntaxHighlighter: any MarkdownUI.CodeSyntaxHighlighter) -> some SwiftUICore.View
@@ -1066,20 +1156,27 @@ public struct Strikethrough : MarkdownUI.InlineContentProtocol {
   public var _inlineContent: MarkdownUI.InlineContent {
     get
   }
+  public init(_ text: Swift.String)
+  public init(@MarkdownUI.InlineContentBuilder content: () -> MarkdownUI.InlineContent)
 }
 public struct FontSize : MarkdownUI.TextStyle {
+  public init(_ relativeSize: MarkdownUI.RelativeSize)
+  public init(_ size: CoreFoundation.CGFloat)
   public func _collectAttributes(in attributes: inout Foundation.AttributeContainer)
 }
 extension MarkdownUI.Theme {
   public static let gitHub: MarkdownUI.Theme
 }
 public struct StrikethroughStyle : MarkdownUI.TextStyle {
+  public init(_ lineStyle: SwiftUICore.Text.LineStyle?)
   public func _collectAttributes(in attributes: inout Foundation.AttributeContainer)
 }
 public struct Emphasis : MarkdownUI.InlineContentProtocol {
   public var _inlineContent: MarkdownUI.InlineContent {
     get
   }
+  public init(_ text: Swift.String)
+  public init(@MarkdownUI.InlineContentBuilder content: () -> MarkdownUI.InlineContent)
 }
 extension MarkdownUI.Markdown : Swift.Sendable {}
 extension MarkdownUI.TextTableColumnAlignment : Swift.Equatable {}

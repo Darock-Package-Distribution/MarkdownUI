@@ -9,12 +9,12 @@ let package = Package(
         .library(name: "MarkdownUI", targets: ["MarkdownUI", "_MarkdownUIDependenciesWrapper"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Darock-Studio/DarockUI", branch: "main")
+        .package(url: "https://github.com/Darock-Studio/DarockUI", from: "1.0.1")
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
-        .binaryTarget(name: "MarkdownUI", path: "MarkdownUI.xcframework"),
+        .binaryTarget(name: "MarkdownUI", url: "", checksum: ""),
         .target(name: "_MarkdownUIDependenciesWrapper", dependencies: [
             "DarockUI"
         ])

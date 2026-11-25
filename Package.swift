@@ -14,7 +14,7 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
-        .binaryTarget(name: "MarkdownUI", url: "https://github.com/darock-package-distribution/markdownui/releases/download/1.0.1/MarkdownUI.xcframework.zip", checksum: "27d470c07669e39dcb90769b3ff306bd9178f26a09d699998a3b3f53c5299c95"),
+        .binaryTarget(name: "MarkdownUI", url: "https://github.com/darock-package-distribution/markdownui/releases/download/1.0.2/MarkdownUI.xcframework.zip", checksum: "069d959ae34d8349913099a32613ba581ee65a7beb9469e3c1dc42d4429ff30b"),
         .target(name: "_MarkdownUIDependenciesWrapper", dependencies: [
             "DarockUI"
         ])
